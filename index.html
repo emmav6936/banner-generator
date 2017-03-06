@@ -9,13 +9,14 @@
     $(function() {
         $('button').click(function(){
           // get
-          $('#name').html();
-           $'#favoritecolor').html();
-            $('#birthday').html();
+          var name = $('#name').val();
+           var favoriteColor = $('#favoritecolor').val();
+           var birthday = $('#birthday').val();
           // set
-          //$('#banner').html("Happy" )
-          $('h1').html("Happy" )
-        };
+          $('#banner').css("background-color",favoriteColor);
+          $('h1').html("Happy " + birthday + " Birthday " + name + " !!!" )
+       
+       });
       
       
         
@@ -24,10 +25,10 @@
   </script>
   <style>
   #questions{
-    background-color: white;
+    background-color: white ;
   }
     #banner  {
-      background-color: #ccffcc;
+      background-color: favoriteColor;
     }
   </style>
 </head>
